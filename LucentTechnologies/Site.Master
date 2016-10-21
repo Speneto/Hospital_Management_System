@@ -1,0 +1,157 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="LucentTechnologies.SiteMaster" %>
+
+<%@ Register Src="~/Controls/General.ascx" TagPrefix="general" TagName="General" %>
+<%@ Register Src="~/Controls/Administrator.ascx" TagPrefix="administrators" TagName="Administrator" %>
+<%@ Register Src="~/Controls/Manager.ascx" TagPrefix="manager" TagName="Manager" %>
+<%@ Register Src="~/Controls/Doctors.ascx" TagPrefix="doctors" TagName="Doctors" %>
+<%@ Register Src="~/Controls/Scientist.ascx" TagPrefix="scientist" TagName="Scientist" %>
+<%@ Register Src="~/Controls/Nurses.ascx" TagPrefix="nurses" TagName="Nurses" %>
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> WhiteBox Hospital Solutions</title>
+
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+    <webopt:bundlereference runat="server" path="~/Content/css" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    
+</head>
+<body>
+    <form runat="server">
+        <asp:ScriptManager runat="server">
+
+           <Scripts>
+                
+                <%--To learn more about bundling scripts in ScriptManager see http://go.microsoft.com/fwlink/?LinkID=301884 --%>
+                <%--Framework Scripts--%>
+                <asp:ScriptReference Name="MsAjaxBundle" />
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="bootstrap" />
+                <asp:ScriptReference Name="respond" />
+                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+                <asp:ScriptReference Name="WebFormsBundle" />
+                <%--Site Scripts--%>
+            </Scripts>
+        </asp:ScriptManager>
+
+        
+        
+        <div class="navbar navbar-default navbar-fixed-top">
+
+            
+                    <%--Menu switch--%>
+                 <%switch ((string)(Session["userty"]))
+                   {
+                       case "Data Manager":
+                           {
+                    %>
+                    <manager:Manager runat="server" ID="Manager" />
+                 <%
+                               break;
+                           }
+                       case "Doctor":
+                           {
+                     %>
+                     <doctors:Doctors runat="server" ID="Doctors" />
+                  <%
+                               break;
+                           }
+                       case "Nurse":
+                           {
+                               %>
+                     <nurses:Nurses runat="server" ID="Nurse" />
+                 <%
+                               break;
+                           }
+                       case "LaboratoryScientist":
+                           {
+                         %>
+                   <scientist:Scientist runat="server" ID="Scientist" />
+                  <%
+                               break;
+                           }
+               
+                       case "Administrator":
+                           {
+                    
+                     %>
+
+                 <administrators:Administrator runat="server" ID="Administrator" />
+               <%
+                               break;
+                           }
+                       default:
+                           {
+                    %>
+                   <general:General runat="server" ID="General" />
+                   
+                <%
+                               break;
+                           }
+                   }
+                     %>
+
+        </div>            
+            
+        
+        <div class="container body-content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+            <hr />
+            <footer >
+                <div class="row">
+                    <div class="col-md-6 col-md-push-5">
+                <p> <strong>&copy; <%: DateTime.Now.Year %> Lucent Technologies </strong></p>
+                    </div>
+                    </div>
+            </footer>
+        </div>
+    </form>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

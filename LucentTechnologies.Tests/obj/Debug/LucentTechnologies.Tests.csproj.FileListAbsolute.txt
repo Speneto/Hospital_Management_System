@@ -1,0 +1,13 @@
+C:\Users\HP\documents\visual studio 2013\Projects\LucentTechnologies\LucentTechnologies.Tests\bin\Debug\LucentTechnologies.Tests.dll.config
+C:\Users\HP\documents\visual studio 2013\Projects\LucentTechnologies\LucentTechnologies.Tests\bin\Debug\LucentTechnologies.Tests.dll
+C:\Users\HP\documents\visual studio 2013\Projects\LucentTechnologies\LucentTechnologies.Tests\bin\Debug\LucentTechnologies.Tests.pdb
+C:\Users\HP\documents\visual studio 2013\Projects\LucentTechnologies\LucentTechnologies.Tests\bin\Debug\LucentTechnologies.dll
+C:\Users\HP\documents\visual studio 2013\Projects\LucentTechnologies\LucentTechnologies.Tests\bin\Debug\System.Web.Optimization.dll
+C:\Users\HP\documents\visual studio 2013\Projects\LucentTechnologies\LucentTechnologies.Tests\bin\Debug\Microsoft.AspNet.FriendlyUrls.dll
+C:\Users\HP\documents\visual studio 2013\Projects\LucentTechnologies\LucentTechnologies.Tests\bin\Debug\LucentTechnologies.pdb
+C:\Users\HP\documents\visual studio 2013\Projects\LucentTechnologies\LucentTechnologies.Tests\bin\Debug\System.Web.Optimization.xml
+C:\Users\HP\documents\visual studio 2013\Projects\LucentTechnologies\LucentTechnologies.Tests\bin\Debug\Microsoft.AspNet.FriendlyUrls.xml
+C:\Users\HP\documents\visual studio 2013\Projects\LucentTechnologies\LucentTechnologies.Tests\obj\Debug\LucentTechnologies.Tests.csprojResolveAssemblyReference.cache
+C:\Users\HP\documents\visual studio 2013\Projects\LucentTechnologies\LucentTechnologies.Tests\obj\Debug\LucentTechnologies.Tests.dll
+C:\Users\HP\documents\visual studio 2013\Projects\LucentTechnologies\LucentTechnologies.Tests\obj\Debug\LucentTechnologies.Tests.pdb
+C:\Users\HP\documents\visual studio 2013\Projects\LucentTechnologies\LucentTechnologies.Tests\bin\Debug\AjaxControlToolkit.dll
